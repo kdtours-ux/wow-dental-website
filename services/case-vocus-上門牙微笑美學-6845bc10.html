@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上門牙微笑美學 | 治療案例 | 科技渥爾牙診所</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* 案例頁面專屬樣式 */
+    .case-overview {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #1a5276 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .case-overview h2 {
+      color: white;
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+    .case-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .case-meta-item {
+      background: rgba(255,255,255,0.15);
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+    }
+    .case-meta-label {
+      font-size: 0.75rem;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .case-meta-value {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 0.2rem;
+    }
+    .case-summary {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      border-left: 4px solid var(--primary-color);
+    }
+    .case-summary h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+    .case-summary p {
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 0;
+    }
+    .key-points {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .key-points h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+    .key-points ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .key-points li {
+      padding: 0.6rem 0;
+      padding-left: 1.8rem;
+      position: relative;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .key-points li:last-child {
+      border-bottom: none;
+    }
+    .key-points li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+    .case-images-section {
+      margin: 3rem 0;
+    }
+    .case-images-section h3 {
+      text-align: center;
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .case-images-section h3::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--secondary-color);
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+    .case-image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .case-image-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+    .case-image-grid-item {
+      position: relative;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .case-image-grid-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .case-image-grid-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .case-image-number {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: var(--primary-color);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      z-index: 2;
+    }
+    .case-disclaimer {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .case-disclaimer strong {
+      color: #f57c00;
+    }
+    .case-cta {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    .case-cta h3 {
+      margin-top: 0;
+      color: var(--primary-color);
+    }
+    .case-cta .btn-primary {
+      margin-top: 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">科技渥爾牙診所</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">首頁</a></li>
+          <li class="dropdown">
+            <a href="#">服務項目</a>
+            <ul class="dropdown-menu">
+              <li><a href="implants.html">3D數位植牙</a></li>
+              <li><a href="orthodontics.html">數位矯正</a></li>
+              <li><a href="cadcam.html">CAD/CAM全瓷</a></li>
+              <li><a href="cases.html">治療案例</a></li>
+            </ul>
+          </li>
+          <li><a href="../about.html">關於我們</a></li>
+          <li><a href="../contact.html">聯絡我們</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>上門牙微笑美學</h1>
+        <p>CAD/CAM全瓷｜案例分享</p>
+      </div>
+    </section>
+
+    <section class="service-content">
+      <div class="container">
+        <!-- 案例概覽卡 -->
+        <div class="case-overview">
+          <h2>📋 案例概覽</h2>
+          <div class="case-meta-grid">
+            <div class="case-meta-item">
+              <div class="case-meta-label">治療項目</div>
+              <div class="case-meta-value">CAD/CAM全瓷</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">發布日期</div>
+              <div class="case-meta-value">2025/06/08</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">主治醫師</div>
+              <div class="case-meta-value">Dr. Kevin Chien</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">臨床照片</div>
+              <div class="case-meta-value">3 張</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 病例摘要 -->
+        <div class="case-summary">
+          <h3>📝 病例摘要</h3>
+          <p>本案例著重前牙微笑曲線設計，綜合考量牙齒比例、牙齦對稱度與唇部動態，打造自然協調的笑容。採用全瓷貼片或全瓷冠，數位化模擬預覽治療成果，讓患者在術前即了解最終美學效果。材質選用高透光性瓷塊，仿真效果媲美自然牙。</p>
+        </div>
+
+        <!-- 治療要點 -->
+        <div class="key-points">
+          <h3>🔑 治療要點</h3>
+          <ul>
+            <li>前牙微笑曲線設計</li>
+            <li>全瓷貼片/全瓷冠</li>
+            <li>數位化模擬預覽</li>
+            <li>高透光材質仿真效果</li>
+          </ul>
+        </div>
+
+        <!-- 臨床照片 -->
+        <div class="case-images-section">
+          <h3>📷 臨床照片紀錄</h3>
+          <div class="case-image-grid">
+          <div class="case-image-grid-item">
+            <div class="case-image-number">圖 1</div>
+            <img src="../images/cases/vocus/6845bc10_1.jpg" alt="上門牙微笑美學 - 臨床照片 1" loading="lazy">
+          </div>
+          <div class="case-image-grid-item">
+            <div class="case-image-number">圖 2</div>
+            <img src="../images/cases/vocus/6845bc10_2.jpg" alt="上門牙微笑美學 - 臨床照片 2" loading="lazy">
+          </div>
+          <div class="case-image-grid-item">
+            <div class="case-image-number">圖 3</div>
+            <img src="../images/cases/vocus/6845bc10_3.jpg" alt="上門牙微笑美學 - 臨床照片 3" loading="lazy">
+          </div>
+          </div>
+        </div>
+
+        <!-- 免責聲明 -->
+        <div class="case-disclaimer">
+          <strong>⚠ 重要說明</strong><br>
+          本案例僅為醫療知識分享與學術討論用途，每位患者的口腔狀況與治療方案皆不相同。實際治療計畫需經由專業醫師進行完整評估後制定。本頁面已去除所有患者個人識別資訊，保護患者隱私。
+        </div>
+
+        <!-- CTA -->
+        <div class="case-cta">
+          <h3>想要了解更多？</h3>
+          <p>每個人的牙齒狀況不同，歡迎預約諮詢，讓我們為您制定專屬的治療計畫。</p>
+          <a href="../contact.html" class="btn-primary">預約免費諮詢</a>
+          <a href="cases.html" class="btn-secondary" style="margin-left: 1rem;">← 返回案例列表</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-info">
+        <h3>科技渥爾牙診所</h3>
+        <p>專業．數位．安心</p>
+        <p>電話：02-27380200</p>
+        <p>地址：台北市大安區復興南路二段302號</p>
+        <p>官方 Line：@599heehy</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">首頁</a>
+        <a href="implants.html">3D數位植牙</a>
+        <a href="orthodontics.html">數位矯正</a>
+        <a href="cadcam.html">CAD/CAM全瓷</a>
+        <a href="cases.html">治療案例</a>
+        <a href="../about.html">關於我們</a>
+        <a href="../contact.html">聯絡我們</a>
+      </div>
+      <p class="copyright">&copy; 2024 科技渥爾牙診所 版權所有</p>
+    </div>
+  </footer>
+</body>
+</html>

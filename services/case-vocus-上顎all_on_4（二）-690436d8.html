@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上顎all on 4（二） | 治療案例 | 科技渥爾牙診所</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* 案例頁面專屬樣式 */
+    .case-overview {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #1a5276 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .case-overview h2 {
+      color: white;
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+    .case-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .case-meta-item {
+      background: rgba(255,255,255,0.15);
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+    }
+    .case-meta-label {
+      font-size: 0.75rem;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .case-meta-value {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 0.2rem;
+    }
+    .case-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      line-height: 1.8;
+    }
+    .case-content h3 {
+      color: var(--primary-color);
+      margin-top: 2rem;
+      border-left: 4px solid var(--secondary-color);
+      padding-left: 1rem;
+    }
+    .case-content h4 {
+      color: #2c5282;
+      margin-top: 1.5rem;
+    }
+    .case-content p {
+      margin-bottom: 0.8rem;
+      color: #444;
+    }
+    .key-points {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .key-points h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+    .key-points ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .key-points li {
+      padding: 0.6rem 0;
+      padding-left: 1.8rem;
+      position: relative;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .key-points li:last-child {
+      border-bottom: none;
+    }
+    .key-points li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+    .case-images-section {
+      margin: 3rem 0;
+    }
+    .case-images-section h3 {
+      text-align: center;
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .case-images-section h3::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--secondary-color);
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+    .case-image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .case-image-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+    .case-image-grid-item {
+      position: relative;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .case-image-grid-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .case-image-grid-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .case-image-number {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: var(--primary-color);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      z-index: 2;
+    }
+    .case-disclaimer {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .case-disclaimer strong {
+      color: #f57c00;
+    }
+    .case-cta {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    .case-cta h3 {
+      margin-top: 0;
+      color: var(--primary-color);
+    }
+    .case-cta .btn-primary {
+      margin-top: 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">科技渥爾牙診所</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">首頁</a></li>
+          <li class="dropdown">
+            <a href="#">服務項目</a>
+            <ul class="dropdown-menu">
+              <li><a href="implants.html">3D數位植牙</a></li>
+              <li><a href="orthodontics.html">數位矯正</a></li>
+              <li><a href="cadcam.html">CAD/CAM全瓷</a></li>
+              <li><a href="cases.html">治療案例</a></li>
+            </ul>
+          </li>
+          <li><a href="../about.html">關於我們</a></li>
+          <li><a href="../contact.html">聯絡我們</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>上顎all on 4（二）</h1>
+        <p>3D數位植牙｜案例分享</p>
+      </div>
+    </section>
+
+    <section class="service-content">
+      <div class="container">
+        <!-- 案例概覽卡 -->
+        <div class="case-overview">
+          <h2>📋 案例概覽</h2>
+          <div class="case-meta-grid">
+            <div class="case-meta-item">
+              <div class="case-meta-label">治療項目</div>
+              <div class="case-meta-value">3D數位植牙</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">發布日期</div>
+              <div class="case-meta-value">2025/10/31</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">主治醫師</div>
+              <div class="case-meta-value">Dr. Kevin Chien</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">臨床照片</div>
+              <div class="case-meta-value">10 張</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 詳細內容 -->
+        <div class="case-content">
+      <p>Case Report (Part II): Maxillary All-on-4 Immediate Reconstruction & Radiographic Evaluation</p>
+      <p style='font-weight: 600; color: #2c5282; margin-top: 1.2rem; background: #f0f4f8; padding: 0.6rem 1rem; border-radius: 6px; display: inline-block;'>1. Surgical Step Details (Figures 11–17)</p>
+      <p style='font-weight: 600; color: #2c5282; margin-top: 1.2rem; background: #f0f4f8; padding: 0.6rem 1rem; border-radius: 6px; display: inline-block;'>圖 11–13 (Figure 11, 12, 13)：骨移植與微創填補技術（Bone Grafting & Socket Grafting）</p>
+      <p>使用顆粒狀骨粉（Bone graft material）進行缺損處填補。</p>
+      <p>針對拔牙窩缺損（Extraction sockets）與植體周圍之跳躍間隙（Jump distance）進行精準填充，確保軟硬組織足夠支持與未來的唇側豐隆度。</p>
+      <p style='font-weight: 600; color: #2c5282; margin-top: 1.2rem; background: #f0f4f8; padding: 0.6rem 1rem; border-radius: 6px; display: inline-block;'>圖 14 (Figure 14)：屏障膜固定與覆蓋（Membrane Placement & Fixation）</p>
+      <p>將切割修整適當之膠原蛋白屏障膜（Collagen membrane）平整覆蓋於骨移植區上方。</p>
+      <p>阻隔上皮細胞過度長入，達成引導骨再生（GBR）所需之空間維持與組織隔離作用。</p>
+      <p style='font-weight: 600; color: #2c5282; margin-top: 1.2rem; background: #f0f4f8; padding: 0.6rem 1rem; border-radius: 6px; display: inline-block;'>圖 15–16 (Figure 15, 16)：創口對合與無張力縫合（Flap Closure & Tension-free Suturing）</p>
+      <p>進行黏膜骨膜瓣（Mucoperiosteal flap）之減張處理，確保創口得以達到良好的第一期癒合（Primary closure）。</p>
+      <p>使用縫線進行間斷縫合（Interrupted sutures），完整包覆補骨材料與屏障膜，維持術後創口穩定性。</p>
+      <p style='font-weight: 600; color: #2c5282; margin-top: 1.2rem; background: #f0f4f8; padding: 0.6rem 1rem; border-radius: 6px; display: inline-block;'>圖 17 (Figure 17)：手術團隊臨床實作（Surgical Operation）</p>
+      <p>由醫師與手術團隊於無菌環境下進行嚴密之外科操作與創口縫合止血。</p>
+      <p style='font-weight: 600; color: #2c5282; margin-top: 1.2rem; background: #f0f4f8; padding: 0.6rem 1rem; border-radius: 6px; display: inline-block;'>2. Post-operative Radiographic Assessment (Figures 18–20)</p>
+      <p style='font-weight: 600; color: #2c5282; margin-top: 1.2rem; background: #f0f4f8; padding: 0.6rem 1rem; border-radius: 6px; display: inline-block;'>圖 18 (Figure 18)：全景 X 光片檢查（Post-op Panoramic Radiograph）</p>
+      <p>術後影像顯示植体位置與角度良好。</p>
+      <p style='font-weight: 600; color: var(--secondary-color); margin-top: 0.5rem;'>關鍵術後發現： 小臼齒部位植體特別採取 傾斜 17 度 角度植入，成功避開解剖限制並爭取到 13 mm 之長度，為 All-on-4 機構提供極佳之初期穩定度與力學支持。</p>
+      <p style='font-weight: 600; color: #2c5282; margin-top: 1.2rem; background: #f0f4f8; padding: 0.6rem 1rem; border-radius: 6px; display: inline-block;'>圖 19 (Figure 19)：CBCT 切片檢查 — 左側小臼齒區（#25 Location CBCT）</p>
+      <p style='font-weight: 600; color: var(--secondary-color); margin-top: 0.5rem;'>影像評估： CBCT 顯示 #25 骨頭部位極窄，故策略性將植體偏向近心側（Mesial aspect）植入，避開骨質不足區域，成功取得充份之骨頭包覆。</p>
+      <p style='font-weight: 600; color: #2c5282; margin-top: 1.2rem; background: #f0f4f8; padding: 0.6rem 1rem; border-radius: 6px; display: inline-block;'>圖 20 (Figure 20)：CBCT 切片檢查 — 右側小臼齒區（#14 Location CBCT）</p>
+      <p style='font-weight: 600; color: var(--secondary-color); margin-top: 0.5rem;'>影像評估： #14 位置植體精準植入，上方完美避開上顎竇（Maxillary sinus）及鼻竇（Nasal cavity）底部，達成最佳之骨質錨定（Cortical anchorage）。</p>
+      <p style='margin-left: 1.5rem;'>• 3. Overall Clinical Conclusion</p>
+      <p>Strategic Implant Angulation: 藉由小臼齒區 17 度傾斜植入，成功避開解剖構造（上顎竇與鼻竇），並爭取到 13 mm 長度之植體以確保初級穩定度。</p>
+      <p>Defect & Narrow Ridge Management: 針對 #25 骨脊極窄之問題，彈性調整植入位置偏近心側，並結合精準 GBR（骨粉＋屏障膜）填補技術，確保植體周圍硬組織之長期穩定。</p>
+      <p>Primary Closure & Rehabilitation: 無張力縫合維持術後創口封閉，為 All-on-4 即刻加載與後續全口重建提供良好的組織基礎。</p>
+        </div>
+
+        <!-- 治療要點 -->
+        <div class="key-points">
+          <h3>🔑 治療要點</h3>
+          <ul>
+            <li>All-on-4 全口重建技術 — 4 根植體支撐全顎假牙</li>
+            <li>骨移植與微創填補技術精準修復拔牙窩缺損</li>
+            <li>CBCT 術後影像評估確認植體避開上顎竇與鼻竇</li>
+            <li>17 度策略性植體傾斜角度爭取 13mm 長度與最佳穩定度</li>
+          </ul>
+        </div>
+
+        <!-- 臨床照片 -->
+        <div class="case-images-section">
+          <h3>📷 臨床照片紀錄</h3>
+          <div class="case-image-grid">
+      <div class="case-image-grid-item">
+        <div class="case-image-number">圖 1</div>
+        <img src="../images/cases/vocus/690436d8fd89780001b7f485_1.jpg" alt="上顎all on 4（二） - 臨床照片 1" loading="lazy">
+      </div>
+      <div class="case-image-grid-item">
+        <div class="case-image-number">圖 2</div>
+        <img src="../images/cases/vocus/690436d8fd89780001b7f485_2.jpg" alt="上顎all on 4（二） - 臨床照片 2" loading="lazy">
+      </div>
+      <div class="case-image-grid-item">
+        <div class="case-image-number">圖 3</div>
+        <img src="../images/cases/vocus/690436d8fd89780001b7f485_3.jpg" alt="上顎all on 4（二） - 臨床照片 3" loading="lazy">
+      </div>
+      <div class="case-image-grid-item">
+        <div class="case-image-number">圖 4</div>
+        <img src="../images/cases/vocus/690436d8fd89780001b7f485_4.jpg" alt="上顎all on 4（二） - 臨床照片 4" loading="lazy">
+      </div>
+      <div class="case-image-grid-item">
+        <div class="case-image-number">圖 5</div>
+        <img src="../images/cases/vocus/690436d8fd89780001b7f485_5.jpg" alt="上顎all on 4（二） - 臨床照片 5" loading="lazy">
+      </div>
+      <div class="case-image-grid-item">
+        <div class="case-image-number">圖 6</div>
+        <img src="../images/cases/vocus/690436d8fd89780001b7f485_6.jpg" alt="上顎all on 4（二） - 臨床照片 6" loading="lazy">
+      </div>
+      <div class="case-image-grid-item">
+        <div class="case-image-number">圖 7</div>
+        <img src="../images/cases/vocus/690436d8fd89780001b7f485_7.jpg" alt="上顎all on 4（二） - 臨床照片 7" loading="lazy">
+      </div>
+      <div class="case-image-grid-item">
+        <div class="case-image-number">圖 8</div>
+        <img src="../images/cases/vocus/690436d8fd89780001b7f485_8.jpg" alt="上顎all on 4（二） - 臨床照片 8" loading="lazy">
+      </div>
+      <div class="case-image-grid-item">
+        <div class="case-image-number">圖 9</div>
+        <img src="../images/cases/vocus/690436d8fd89780001b7f485_9.jpg" alt="上顎all on 4（二） - 臨床照片 9" loading="lazy">
+      </div>
+      <div class="case-image-grid-item">
+        <div class="case-image-number">圖 10</div>
+        <img src="../images/cases/vocus/690436d8fd89780001b7f485_10.jpg" alt="上顎all on 4（二） - 臨床照片 10" loading="lazy">
+      </div>
+          </div>
+        </div>
+
+        <!-- 免責聲明 -->
+        <div class="case-disclaimer">
+          <strong>⚠ 重要說明</strong><br>
+          本案例僅為醫療知識分享與學術討論用途，每位患者的口腔狀況與治療方案皆不相同。實際治療計畫需經由專業醫師進行完整評估後制定。本頁面已去除所有患者個人識別資訊，保護患者隱私。
+        </div>
+
+        <!-- CTA -->
+        <div class="case-cta">
+          <h3>想要了解更多？</h3>
+          <p>每個人的牙齒狀況不同，歡迎預約諮詢，讓我們為您制定專屬的治療計畫。</p>
+          <a href="../contact.html" class="btn-primary">預約免費諮詢</a>
+          <a href="cases.html" class="btn-secondary" style="margin-left: 1rem;">← 返回案例列表</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-info">
+        <h3>科技渥爾牙診所</h3>
+        <p>專業．數位．安心</p>
+        <p>電話：02-27380200</p>
+        <p>地址：台北市大安區復興南路二段302號</p>
+        <p>官方 Line：@599heehy</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">首頁</a>
+        <a href="implants.html">3D數位植牙</a>
+        <a href="orthodontics.html">數位矯正</a>
+        <a href="cadcam.html">CAD/CAM全瓷</a>
+        <a href="cases.html">治療案例</a>
+        <a href="../about.html">關於我們</a>
+        <a href="../contact.html">聯絡我們</a>
+      </div>
+      <p class="copyright">&copy; 2024 科技渥爾牙診所 版權所有</p>
+    </div>
+  </footer>
+</body>
+</html>

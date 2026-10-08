@@ -1,124 +1,307 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>治療案例 | 科技渥爾牙診所</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>治療案例 | 科技渥爾牙醫診所</title>
+  <meta name="description" content="豐富臨床經驗，專業治療成果。查看科技渥爾牙醫診所的植牙、矯正、美學修復等真實治療案例。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{primary:{50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',600:'#1E3A8A',700:'#1e3a8a',800:'#1e40af'},warm:{50:'#faf7f2',100:'#f5f0e6'},titanium:{50:'#f8f9fa',100:'#e9ecef',200:'#dee2e6',300:'#ced4da',400:'#adb5bd',500:'#6c757d',600:'#495057',700:'#343a40',800:'#212529'}}}}}</script>
+  <style>html{scroll-behavior:smooth}.nav-link{position:relative}.nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#1E3A8A;transition:width .3s}.nav-link:hover::after{width:100%}.gi:hover{transform:scale(1.02)}.gi{transition:all .5s ease}.article-card{transition:all .3s ease}.article-card:hover{transform:translateY(-4px)}</style>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <a href="../index.html" class="logo">科技渥爾牙診所</a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="../index.html">首頁</a></li>
-          <li class="dropdown">
-            <a href="#">服務項目</a>
-            <ul class="dropdown-menu">
-              <li><a href="implants.html">3D數位植牙</a></li>
-              <li><a href="orthodontics.html">數位矯正</a></li>
-              <li><a href="cadcam.html">CAD/CAM全瓷</a></li>
-              <li><a href="cases.html">治療案例</a></li>
-            </ul>
-          </li>
-          <li><a href="../about.html">關於我們</a></li>
-          <li><a href="../contact.html">聯絡我們</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-  <section class="page-header">
-    <div class="container">
-      <h1>治療案例</h1>
-      <p>豐富臨床經驗．專業治療成果</p>
-    </div>
-  </section>
+<body class="font-sans text-titanium-700 antialiased bg-titanium-50">
 
-  <section class="service-content">
-    <div class="container">
-      <h2>最新案例</h2>
-      <div class="articles-list">
-        <article class="article-card" style="border-left: 4px solid var(--primary-color);">
-          <h2>右上第一大臼齒缺牙重建：微創內提竇增骨植牙</h2>
-          <div class="article-meta">發布日期：2026-10-08｜治療項目：3D數位植牙 + 內提上顎竇增高術</div>
-          <div class="article-body">
-            <p><strong>案例摘要：</strong>患者右上第一大臼齒（Tooth #16）長期缺牙，齒槽骨吸收且上顎竇氣化，殘餘骨高度極為有限。採用微創內提上顎竇增高術（Internal Sinus Lift），在保護上顎竇膜完整性的前提下，精準推升竇膜並補入骨粉，同時完成植體植入。</p>
-            <p><strong>關鍵成果：</strong>微創術式、上顎竇膜完整無破損、植體穩定度優異、術後恢復良好。患者術後腫痛感大幅減輕。</p>
-            <div style="margin-top: 1rem; text-align: center;">
-              <img src="../images/case-implant-001-coronal-view.jpg" alt="術後CBCT冠狀面視角" style="max-width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-            </div>
-          </div>
-          <a href="../case-report-implant-001.html" class="btn-secondary">查看完整案例 →</a>
-        </article>
-        <article class="article-card">
-          <h2>上顎竇提升術：技術，決定傷口大小</h2>
-          <div class="article-meta">發布日期：2026-09-08｜治療項目：3D數位植牙 + 上顎竇提升術</div>
-          <div class="article-body">
-            <p><strong>案例摘要：</strong>患者上顎左側第二大臼齒長期缺牙，骨量明顯不足。透過微創內開式上顎竇提升術，在單一小傷口中完成補骨與植牙。術後鼻竇黏膜完整無破損，植體角度與穩定度理想。</p>
-            <p><strong>關鍵成果：</strong>單一小傷口、鼻竇黏膜完整、骨粉均勻包覆、植體穩定度理想。患者當天即可正常進食。</p>
-          </div>
-          <a href="case-sinus-lift-2026-09-08.html" class="btn-secondary">查看完整案例 →</a>
-        </article>
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <a href="../index.html" class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center text-white text-xl shadow-lg"><i class="fas fa-tooth"></i></div>
+        <div><span class="text-xl font-bold text-primary-600">科技渥爾</span><span class="text-sm text-titanium-500 block -mt-1">牙醫診所</span></div>
+      </a>
+      <div class="hidden lg:flex items-center space-x-8">
+        <a href="../index.html" class="nav-link text-titanium-700 hover:text-primary-600 font-medium">回首頁</a>
+        <a href="cases.html" class="nav-link text-primary-600 font-medium">治療案例</a>
+        <a href="https://line.me/R/ti/p/@599heehy" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2.5 rounded-full font-medium text-sm inline-flex items-center space-x-2 transition-all hover:-translate-y-0.5"><i class="fab fa-line"></i><span>Line</span></a>
       </div>
+      <button class="lg:hidden text-titanium-700 p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i class="fas fa-bars text-2xl"></i></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-titanium-100">
+    <div class="px-4 py-4 space-y-3">
+      <a href="../index.html" class="block py-2 text-titanium-700 font-medium">回首頁</a>
+      <a href="cases.html" class="block py-2 text-primary-600 font-medium">治療案例</a>
+      <a href="https://line.me/R/ti/p/@599heehy" target="_blank" class="block bg-green-500 text-white px-6 py-3 rounded-full font-medium text-center mt-4"><i class="fab fa-line mr-2"></i>Line</a>
+    </div>
+  </div>
+</nav>
 
+<!-- Hero Section -->
+<section class="relative pt-32 pb-16 bg-gradient-to-br from-primary-600 to-primary-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-5 py-2 mb-8">
+      <i class="fas fa-folder-open text-white/90"></i>
+      <span class="text-white/90 text-sm font-medium">Clinical Cases</span>
+    </div>
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+      治療案例
+    </h1>
+    <p class="text-xl text-white/80 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+      豐富臨床經驗 · 專業治療成果<br>
+      真實記錄每一位患者的牙齒重生之旅
+    </p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <span class="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium"><i class="fas fa-tooth mr-2"></i>3D數位植牙</span>
+      <span class="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium"><i class="fas fa-smile mr-2"></i>數位矯正</span>
+      <span class="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium"><i class="fas fa-crown mr-2"></i>美學修復</span>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Cases -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <div class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">Featured Cases</div>
+      <h2 class="text-4xl lg:text-5xl font-bold text-titanium-800 mb-4">精選案例</h2>
+      <p class="text-titanium-600 text-lg max-w-2xl mx-auto">最新的治療成果，見證專業技術與細心照護的完美結合</p>
+    </div>
+    
+    <!-- Featured Case #001 -->
+    <div class="bg-titanium-50 rounded-3xl overflow-hidden shadow-xl mb-12">
+      <div class="grid lg:grid-cols-2 gap-0">
+        <div class="relative overflow-hidden">
+          <img src="../images/case-implant-001-coronal-view.jpg" alt="右上第一大臼齒微創內提竇增骨植牙案例" class="w-full h-full object-cover min-h-[400px] gi" loading="eager">
+          <div class="absolute top-4 left-4">
+            <span class="bg-primary-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">最新案例</span>
+          </div>
+        </div>
+        <div class="p-8 lg:p-12 flex flex-col justify-center">
+          <div class="flex items-center space-x-2 text-titanium-500 text-sm mb-4">
+            <i class="fas fa-calendar-alt"></i>
+            <span>2026-10-08</span>
+            <span class="mx-2">·</span>
+            <span class="text-primary-600 font-medium">3D數位植牙 + 內提上顎竇增高術</span>
+          </div>
+          <h3 class="text-2xl lg:text-3xl font-bold text-titanium-800 mb-4 leading-tight">
+            右上第一大臼齒缺牙重建：微創內提竇增骨植牙
+          </h3>
+          <p class="text-titanium-600 leading-relaxed mb-6">
+            患者右上第一大臼齒（Tooth #16）長期缺牙，齒槽骨吸收且上顎竇氣化，殘餘骨高度極為有限。採用微創內提上顎竇增高術，在保護上顎竇膜完整性的前提下，精準推升竇膜並補入骨粉，同時完成植體植入。
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">微創術式</span>
+            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">上顎竇膜完整</span>
+            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">植體穩定度優異</span>
+          </div>
+          <a href="../case-report-implant-001.html" class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-all">
+            查看完整案例 <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Featured Case #002 -->
+    <div class="bg-titanium-50 rounded-3xl overflow-hidden shadow-xl">
+      <div class="grid lg:grid-cols-2 gap-0">
+        <div class="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+          <div class="flex items-center space-x-2 text-titanium-500 text-sm mb-4">
+            <i class="fas fa-calendar-alt"></i>
+            <span>2026-09-08</span>
+            <span class="mx-2">·</span>
+            <span class="text-primary-600 font-medium">3D數位植牙 + 上顎竇提升術</span>
+          </div>
+          <h3 class="text-2xl lg:text-3xl font-bold text-titanium-800 mb-4 leading-tight">
+            上顎竇提升術：技術，決定傷口大小
+          </h3>
+          <p class="text-titanium-600 leading-relaxed mb-6">
+            患者上顎左側第二大臼齒長期缺牙，骨量明顯不足。透過微創內開式上顎竇提升術，在單一小傷口中完成補骨與植牙。術後鼻竇黏膜完整無破損，植體角度與穩定度理想。
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">單一小傷口</span>
+            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">鼻竇黏膜完整</span>
+            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">當天即可進食</span>
+          </div>
+          <a href="case-sinus-lift-2026-09-08.html" class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-all">
+            查看完整案例 <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        <div class="relative overflow-hidden order-1 lg:order-2">
+          <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80" alt="上顎竇提升術案例" class="w-full h-full object-cover min-h-[400px] gi">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- All Cases Grid -->
+<section class="py-20 bg-titanium-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-titanium-800 mb-4">更多治療案例</h2>
+      <p class="text-titanium-600">探索我們豐富的臨床治療成果</p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Case Card 1 -->
+      <article class="article-card bg-white rounded-2xl shadow-lg overflow-hidden border border-titanium-100">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-xs font-medium">植牙</span>
+            <span class="text-titanium-400 text-sm">2025/07/02</span>
+          </div>
+          <h3 class="text-lg font-bold text-titanium-800 mb-3 hover:text-primary-600 transition-colors">
+            <a href="case-vocus-%2336_%2337_%E6%A4%8D%E9%AB%94%E5%81%87%E7%89%99_%E6%90%AD%E9%85%8D%E5%AE%A2%E8%A3%BD%E5%8C%96%E6%94%AF%E5%8F%B0-6864abdd.html">#36 #37 植體假牙 搭配客製化支台</a>
+          </h3>
+          <p class="text-titanium-600 text-sm mb-4">完整案例紀錄，含4張臨床圖片。</p>
+          <a href="case-vocus-%2336_%2337_%E6%A4%8D%E9%AB%94%E5%81%87%E7%89%99_%E6%90%AD%E9%85%8D%E5%AE%A2%E8%A3%BD%E5%8C%96%E6%94%AF%E5%8F%B0-6864abdd.html" class="inline-flex items-center text-primary-600 text-sm font-medium hover:text-primary-700">
+            閱讀更多 <i class="fas fa-arrow-right ml-1 text-xs"></i>
+          </a>
+        </div>
+      </article>
       
+      <!-- Case Card 2 -->
+      <article class="article-card bg-white rounded-2xl shadow-lg overflow-hidden border border-titanium-100">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-warm-100 text-titanium-700 px-3 py-1 rounded-full text-xs font-medium">牙齒保存</span>
+            <span class="text-titanium-400 text-sm">2025/06/24</span>
+          </div>
+          <h3 class="text-lg font-bold text-titanium-800 mb-3 hover:text-primary-600 transition-colors">
+            <a href="case-vocus-%2316%E8%A3%82%E7%89%99%E7%9A%84%E6%8B%AF%E6%95%91-685ab2a3.html">#16裂牙的拯救</a>
+          </h3>
+          <p class="text-titanium-600 text-sm mb-4">完整案例紀錄，含5張臨床圖片。</p>
+          <a href="case-vocus-%2316%E8%A3%82%E7%89%99%E7%9A%84%E6%8B%AF%E6%95%91-685ab2a3.html" class="inline-flex items-center text-primary-600 text-sm font-medium hover:text-primary-700">
+            閱讀更多 <i class="fas fa-arrow-right ml-1 text-xs"></i>
+          </a>
+        </div>
+      </article>
+      
+      <!-- Case Card 3 -->
+      <article class="article-card bg-white rounded-2xl shadow-lg overflow-hidden border border-titanium-100">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-xs font-medium">口腔外科</span>
+            <span class="text-titanium-400 text-sm">2025/06/22</span>
+          </div>
+          <h3 class="text-lg font-bold text-titanium-800 mb-3 hover:text-primary-600 transition-colors">
+            <a href="case-vocus-15%E9%98%BB%E7%94%9F%E7%89%99%E6%8B%94%E9%99%A4%E8%A3%9C%E9%AA%A8%EF%BC%88%E4%B8%80%EF%BC%89-68588c89.html">15阻生牙拔除補骨（一）</a>
+          </h3>
+          <p class="text-titanium-600 text-sm mb-4">完整案例紀錄，含8張臨床圖片。</p>
+          <a href="case-vocus-15%E9%98%BB%E7%94%9F%E7%89%99%E6%8B%94%E9%99%A4%E8%A3%9C%E9%AA%A8%EF%BC%88%E4%B8%80%EF%BC%89-68588c89.html" class="inline-flex items-center text-primary-600 text-sm font-medium hover:text-primary-700">
+            閱讀更多 <i class="fas fa-arrow-right ml-1 text-xs"></i>
+          </a>
+        </div>
+      </article>
+      
+      <!-- Case Card 4 -->
+      <article class="article-card bg-white rounded-2xl shadow-lg overflow-hidden border border-titanium-100">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-xs font-medium">口腔外科</span>
+            <span class="text-titanium-400 text-sm">2025/06/22</span>
+          </div>
+          <h3 class="text-lg font-bold text-titanium-800 mb-3 hover:text-primary-600 transition-colors">
+            <a href="case-vocus-15%E9%98%BB%E7%94%9F%E7%89%99%E6%8B%94%E9%99%A4%E8%A3%9C%E9%AA%A8%EF%BC%88%E4%BA%8C%EF%BC%89-68588cb0.html">15阻生牙拔除補骨（二）</a>
+          </h3>
+          <p class="text-titanium-600 text-sm mb-4">完整案例紀錄，含10張臨床圖片。</p>
+          <a href="case-vocus-15%E9%98%BB%E7%94%9F%E7%89%99%E6%8B%94%E9%99%A4%E8%A3%9C%E9%AA%A8%EF%BC%88%E4%BA%8C%EF%BC%89-68588cb0.html" class="inline-flex items-center text-primary-600 text-sm font-medium hover:text-primary-700">
+            閱讀更多 <i class="fas fa-arrow-right ml-1 text-xs"></i>
+          </a>
+        </div>
+      </article>
+      
+      <!-- Case Card 5 -->
+      <article class="article-card bg-white rounded-2xl shadow-lg overflow-hidden border border-titanium-100">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-xs font-medium">植牙材料</span>
+            <span class="text-titanium-400 text-sm">2025/06/11</span>
+          </div>
+          <h3 class="text-lg font-bold text-titanium-800 mb-3 hover:text-primary-600 transition-colors">
+            <a href="case-vocus-Bio-HPP%E5%9C%A8%E6%A4%8D%E9%AB%94%E5%81%87%E7%89%99%E7%9A%84%E6%87%89%E7%94%A8-6849a302.html">Bio-HPP在植體假牙的應用</a>
+          </h3>
+          <p class="text-titanium-600 text-sm mb-4">完整案例紀錄，含2張臨床圖片。</p>
+          <a href="case-vocus-Bio-HPP%E5%9C%A8%E6%A4%8D%E9%AB%94%E5%81%87%E7%89%99%E7%9A%84%E6%87%89%E7%94%A8-6849a302.html" class="inline-flex items-center text-primary-600 text-sm font-medium hover:text-primary-700">
+            閱讀更多 <i class="fas fa-arrow-right ml-1 text-xs"></i>
+          </a>
+        </div>
+      </article>
+      
+      <!-- Case Card 6 -->
+      <article class="article-card bg-white rounded-2xl shadow-lg overflow-hidden border border-titanium-100">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-warm-100 text-titanium-700 px-3 py-1 rounded-full text-xs font-medium">牙齒保存</span>
+            <span class="text-titanium-400 text-sm">2025/06/07</span>
+          </div>
+          <h3 class="text-lg font-bold text-titanium-800 mb-3 hover:text-primary-600 transition-colors">
+            <a href="case-vocus-%E4%B8%8A%E9%A1%8E%E7%AA%81%E7%A0%B4%E6%80%A7%E8%A3%82%E7%89%99-6845bc10.html">上顎突破性裂牙</a>
+          </h3>
+          <p class="text-titanium-600 text-sm mb-4">完整案例紀錄，含11張臨床圖片。</p>
+          <a href="case-vocus-%E4%B8%8A%E9%A1%8E%E7%AA%81%E7%A0%B4%E6%80%A7%E8%A3%82%E7%89%99-6845bc10.html" class="inline-flex items-center text-primary-600 text-sm font-medium hover:text-primary-700">
+            閱讀更多 <i class="fas fa-arrow-right ml-1 text-xs"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+    
+    <div class="text-center mt-12">
+      <p class="text-titanium-500 text-sm">還有更多案例持續更新中...</p>
+    </div>
+  </div>
+</section>
 
-      <h2 style="margin-top: 3rem;">一般治療案例（6篇）</h2>
-      <div class="articles-list">
-        <article class="article-card">
-          <h3><a href="case-vocus-%2336_%2337_%E6%A4%8D%E9%AB%94%E5%81%87%E7%89%99_%E6%90%AD%E9%85%8D%E5%AE%A2%E8%A3%BD%E5%8C%96%E6%94%AF%E5%8F%B0-6864abdd.html">#36 #37 植體假牙 搭配客製化支台</a></h3>
-          <div class="article-meta">發布日期：2025/07/02</div>
-          <p>完整案例紀錄，含4張臨床圖片。</p>
-        </article>
-        <article class="article-card">
-          <h3><a href="case-vocus-%2316%E8%A3%82%E7%89%99%E7%9A%84%E6%8B%AF%E6%95%91-685ab2a3.html">#16裂牙的拯救</a></h3>
-          <div class="article-meta">發布日期：2025/06/24</div>
-          <p>完整案例紀錄，含5張臨床圖片。</p>
-        </article>
-        <article class="article-card">
-          <h3><a href="case-vocus-15%E9%98%BB%E7%94%9F%E7%89%99%E6%8B%94%E9%99%A4%E8%A3%9C%E9%AA%A8%EF%BC%88%E4%B8%80%EF%BC%89-68588c89.html">15阻生牙拔除補骨（一）</a></h3>
-          <div class="article-meta">發布日期：2025/06/22</div>
-          <p>完整案例紀錄，含8張臨床圖片。</p>
-        </article>
-        <article class="article-card">
-          <h3><a href="case-vocus-15%E9%98%BB%E7%94%9F%E7%89%99%E6%8B%94%E9%99%A4%E8%A3%9C%E9%AA%A8%EF%BC%88%E4%BA%8C%EF%BC%89-68588cb0.html">15阻生牙拔除補骨（二）</a></h3>
-          <div class="article-meta">發布日期：2025/06/22</div>
-          <p>完整案例紀錄，含10張臨床圖片。</p>
-        </article>
-        <article class="article-card">
-          <h3><a href="case-vocus-Bio-HPP%E5%9C%A8%E6%A4%8D%E9%AB%94%E5%81%87%E7%89%99%E7%9A%84%E6%87%89%E7%94%A8-6849a302.html">Bio-HPP在植體假牙的應用</a></h3>
-          <div class="article-meta">發布日期：2025/06/11</div>
-          <p>完整案例紀錄，含10張臨床圖片。</p>
-        </article>
-        <article class="article-card">
-          <h3><a href="case-vocus-%E7%89%99%E6%A0%B9%E5%91%A8%E5%9C%8D%E7%9A%84%E9%AA%A8%E7%BC%BA%E6%90%8D-6845bd32.html">牙根周圍的骨缺損</a></h3>
-          <div class="article-meta">發布日期：2025/06/08</div>
-          <p>完整案例紀錄，含10張臨床圖片。</p>
-        </article>
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-primary-600 to-primary-700">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">想了解更多治療方案？</h2>
+    <p class="text-xl text-white/80 mb-10">每個人的口腔狀況都不同，讓我們為您量身規劃最適合的治療方案。</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="https://line.me/R/ti/p/@599heehy" target="_blank" class="bg-white text-green-600 px-8 py-4 rounded-full font-bold text-lg inline-flex items-center space-x-3 shadow-2xl hover:-translate-y-1 transition-all">
+        <i class="fab fa-line"></i><span>Line</span>
+      </a>
+      <a href="../index.html#contact" class="border-2 border-white/80 text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center space-x-3 hover:bg-white hover:text-primary-700 transition-all">
+        <i class="fas fa-map-marker-alt"></i><span>診所資訊</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-titanium-800 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center text-white text-xl"><i class="fas fa-tooth"></i></div>
+          <div><span class="text-xl font-bold">科技渥爾</span><span class="text-sm text-titanium-400 block">牙醫診所</span></div>
+        </div>
+        <p class="text-titanium-400 text-sm leading-relaxed">以專業與溫度，打造專屬於您的自信微笑。</p>
+      </div>
+      <div>
+        <div class="font-bold mb-4">聯絡我們</div>
+        <div class="space-y-2 text-titanium-400 text-sm">
+          <div><i class="fas fa-map-marker-alt w-5"></i> 台北市大安區復興南路二段302號</div>
+          <div><i class="fab fa-line w-5 text-green-400"></i> <a href="https://line.me/R/ti/p/@599heehy" target="_blank" class="hover:text-white transition-all">@599heehy</a></div>
+        </div>
+      </div>
+      <div>
+        <div class="font-bold mb-4">快速導覽</div>
+        <div class="grid grid-cols-2 gap-2 text-sm">
+          <a href="../index.html" class="text-titanium-400 hover:text-white transition-all">回診所首頁</a>
+          <a href="cases.html" class="text-titanium-400 hover:text-white transition-all">治療案例</a>
+        </div>
       </div>
     </div>
-  </section></main>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-info">
-        <h3>科技渥爾牙診所</h3>
-        <p>專業．數位．安心</p>
-        <p>地址：台北市大安區復興南路二段302號</p>
-        <p>官方 Line：<a href="https://line.me/R/ti/p/@599heehy" target="_blank">@599heehy</a></p>
-      </div>
-      <div class="footer-links">
-        <a href="../index.html">首頁</a>
-        <a href="implants.html">3D數位植牙</a>
-        <a href="orthodontics.html">數位矯正</a>
-        <a href="cadcam.html">CAD/CAM全瓷</a>
-        <a href="cases.html">治療案例</a>
-        <a href="../about.html">關於我們</a>
-        <a href="../contact.html">聯絡我們</a>
-      </div>
-      <p class="copyright">&copy; 2024 科技渥爾牙診所 版權所有</p>
+    <div class="border-t border-titanium-700 mt-8 pt-8 text-center text-titanium-500 text-sm">
+      © 2024 科技渥爾牙醫診所. All rights reserved.
     </div>
-  </footer>
+  </div>
+</footer>
+
 </body>
 </html>

@@ -1,16 +1,28 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Convert old Vocus case files to Tailwind CSS style
+"""
+
+import os
+import re
+import glob
+from pathlib import Path
+
+# Template for new case pages
+CASE_TEMPLATE = '''<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>透視小臼齒Cap-Lock | 治療案例 | 科技渥爾牙醫診所</title>
-  <meta name="description" content="透視小臼齒Cap-Lock - 科技渥爾牙醫診所治療案例">
+  <title>{title} | 治療案例 | 科技渥爾牙醫診所</title>
+  <meta name="description" content="{description}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{primary:{50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',600:'#1E3A8A',700:'#1e3a8a',800:'#1e40af'},warm:{50:'#faf7f2',100:'#f5f0e6'},titanium:{50:'#f8f9fa',100:'#e9ecef',200:'#dee2e6',300:'#ced4da',400:'#adb5bd',500:'#6c757d',600:'#495057',700:'#343a40',800:'#212529'}}}}</script>
-  <style>html{scroll-behavior:smooth}.nav-link{position:relative}.nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#1E3A8A;transition:width .3s}.nav-link:hover::after{width:100%}</style>
+  <script>tailwind.config={{theme:{{extend:{{colors:{{primary:{{50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',600:'#1E3A8A',700:'#1e3a8a',800:'#1e40af'}},warm:{{50:'#faf7f2',100:'#f5f0e6'}},titanium:{{50:'#f8f9fa',100:'#e9ecef',200:'#dee2e6',300:'#ced4da',400:'#adb5bd',500:'#6c757d',600:'#495057',700:'#343a40',800:'#212529'}}}}}}}}</script>
+  <style>html{{scroll-behavior:smooth}}.nav-link{{position:relative}}.nav-link::after{{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#1E3A8A;transition:width .3s}}.nav-link:hover::after{{width:100%}}</style>
 </head>
 <body class="font-sans text-titanium-700 antialiased bg-titanium-50">
 
@@ -47,11 +59,11 @@
         <i class="fas fa-file-medical-alt"></i>
         <span>治療案例</span>
       </div>
-      <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4">透視小臼齒Cap-Lock</h1>
+      <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4">{title}</h1>
       <div class="flex items-center justify-center space-x-4 text-white/80 text-sm">
-        <span><i class="fas fa-calendar-alt mr-2"></i>2025/06/11</span>
+        <span><i class="fas fa-calendar-alt mr-2"></i>{date}</span>
         <span>·</span>
-        <span>牙科治療</span>
+        <span>{category}</span>
       </div>
     </div>
   </div>
@@ -60,119 +72,7 @@
 <!-- Content -->
 <section class="py-16 bg-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="prose prose-lg max-w-none">
-    <section >
-      <div >
-        <h1>透視小臼齒Cap-Lock</h1>
-        <p>CAD/CAM全瓷｜案例分享</p>
-      </div>
-    </section>
-
-    <section >
-      <div >
-        <!-- 案例概覽卡 -->
-        <div >
-          <h2>📋 案例概覽</h2>
-          <div >
-            <div >
-              <div >治療項目</div>
-              <div >CAD/CAM全瓷</div>
-            </div>
-            <div >
-              <div >發布日期</div>
-              <div >2025/06/11</div>
-            </div>
-            <div >
-              <div >主治醫師</div>
-              <div >Dr. Kevin Chien</div>
-            </div>
-            <div >
-              <div >臨床照片</div>
-              <div >10 張</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 病例摘要 -->
-        <div >
-          <h3>📝 病例摘要</h3>
-          <p>本案採用 Cap-Lock 部分覆蓋式全瓷冠技術，針對裂牙或蛀蝕嚴重的後牙進行微創修復。相較傳統全瓷牙套，Cap-Lock 保留更多健康齒質，減少根管治療機率。數位化CAD/CAM製作確保邊緣密合度與咬合力學精準，全瓷材質兼具美觀與生物相容性。</p>
-        </div>
-
-        <!-- 治療要點 -->
-        <div >
-          <h3>🔑 治療要點</h3>
-          <ul>
-            <li>Cap-Lock 部分覆蓋式修復</li>
-            <li>最大限度保留健康齒質</li>
-            <li>CAD/CAM 數位化製作</li>
-            <li>全瓷材質美觀自然</li>
-          </ul>
-        </div>
-
-        <!-- 臨床照片 -->
-        <div >
-          <h3>📷 臨床照片紀錄</h3>
-          <div >
-          <div >
-            <div >圖 1</div>
-            <img src="../images/cases/vocus/6848defdfd89780001aab2e9_1.png" alt="透視小臼齒Cap-Lock - 臨床照片 1" loading="lazy">
-          </div>
-          <div >
-            <div >圖 2</div>
-            <img src="../images/cases/vocus/6848defdfd89780001aab2e9_2.png" alt="透視小臼齒Cap-Lock - 臨床照片 2" loading="lazy">
-          </div>
-          <div >
-            <div >圖 3</div>
-            <img src="../images/cases/vocus/6848defdfd89780001aab2e9_3.jpg" alt="透視小臼齒Cap-Lock - 臨床照片 3" loading="lazy">
-          </div>
-          <div >
-            <div >圖 4</div>
-            <img src="../images/cases/vocus/6848defdfd89780001aab2e9_4.jpg" alt="透視小臼齒Cap-Lock - 臨床照片 4" loading="lazy">
-          </div>
-          <div >
-            <div >圖 5</div>
-            <img src="../images/cases/vocus/6848defdfd89780001aab2e9_5.jpg" alt="透視小臼齒Cap-Lock - 臨床照片 5" loading="lazy">
-          </div>
-          <div >
-            <div >圖 6</div>
-            <img src="../images/cases/vocus/6848defdfd89780001aab2e9_6.jpg" alt="透視小臼齒Cap-Lock - 臨床照片 6" loading="lazy">
-          </div>
-          <div >
-            <div >圖 7</div>
-            <img src="../images/cases/vocus/6848defdfd89780001aab2e9_7.jpg" alt="透視小臼齒Cap-Lock - 臨床照片 7" loading="lazy">
-          </div>
-          <div >
-            <div >圖 8</div>
-            <img src="../images/cases/vocus/6848defdfd89780001aab2e9_8.jpg" alt="透視小臼齒Cap-Lock - 臨床照片 8" loading="lazy">
-          </div>
-          <div >
-            <div >圖 9</div>
-            <img src="../images/cases/vocus/6848defdfd89780001aab2e9_9.jpg" alt="透視小臼齒Cap-Lock - 臨床照片 9" loading="lazy">
-          </div>
-          <div >
-            <div >圖 10</div>
-            <img src="../images/cases/vocus/6848defdfd89780001aab2e9_10.jpg" alt="透視小臼齒Cap-Lock - 臨床照片 10" loading="lazy">
-          </div>
-          </div>
-        </div>
-
-        <!-- 免責聲明 -->
-        <div >
-          <strong>⚠ 重要說明</strong><br>
-          本案例僅為醫療知識分享與學術討論用途，每位患者的口腔狀況與治療方案皆不相同。實際治療計畫需經由專業醫師進行完整評估後制定。本頁面已去除所有患者個人識別資訊，保護患者隱私。
-        </div>
-
-        <!-- CTA -->
-        <div >
-          <h3>想要了解更多？</h3>
-          <p>每個人的牙齒狀況不同，歡迎預約諮詢，讓我們為您制定專屬的治療計畫。</p>
-          <a href="../contact.html" >預約免費諮詢</a>
-          <a href="cadcam.html"  >← 返回CAD/CAM全瓷列表</a>
-        </div>
-      </div>
-    </section>
-  </div>
+    {content}
   </div>
 </section>
 
@@ -221,3 +121,99 @@
 
 </body>
 </html>
+'''
+
+def extract_case_info(content):
+    """Extract case information from old file"""
+    # Try to extract title
+    title_match = re.search(r'<title>([^<|]+)', content)
+    title = title_match.group(1).strip() if title_match else "治療案例"
+    # Clean up garbled characters
+    title = title.replace('', '').replace('| 治療案例 | 科技渥爾牙醫診所', '').strip()
+    if not title or title == '治':
+        title = "治療案例"
+    
+    # Extract date from content
+    date_match = re.search(r'(\d{4})/(\d{1,2})/(\d{1,2})', content)
+    date = date_match.group(0) if date_match else "2025/01/01"
+    
+    # Extract main content - find text between body tags
+    body_match = re.search(r'<body[^>]*>(.*?)</body>', content, re.DOTALL)
+    if body_match:
+        body_content = body_match.group(1)
+        # Remove header, footer, nav
+        body_content = re.sub(r'<header.*?</header>', '', body_content, flags=re.DOTALL)
+        body_content = re.sub(r'<footer.*?</footer>', '', body_content, flags=re.DOTALL)
+        body_content = re.sub(r'<nav.*?</nav>', '', body_content, flags=re.DOTALL)
+        # Remove script tags
+        body_content = re.sub(r'<script.*?</script>', '', body_content, flags=re.DOTALL)
+        # Keep main content
+        main_match = re.search(r'<main[^>]*>(.*?)</main>', body_content, re.DOTALL)
+        if main_match:
+            content_html = main_match.group(1)
+        else:
+            content_html = body_content
+    else:
+        content_html = "<p>案例內容整理中...</p>"
+    
+    # Clean up the content
+    content_html = re.sub(r'class="[^"]*"', '', content_html)  # Remove old classes
+    content_html = re.sub(r'style="[^"]*"', '', content_html)  # Remove inline styles
+    
+    # Wrap in Tailwind classes
+    # Convert sections to Tailwind styled sections
+    content_html = f'<div class="prose prose-lg max-w-none">{content_html}</div>'
+    
+    return {
+        'title': title,
+        'date': date,
+        'category': '牙科治療',
+        'description': f'{title} - 科技渥爾牙醫診所治療案例',
+        'content': content_html
+    }
+
+def convert_case_file(filepath):
+    """Convert a single case file"""
+    try:
+        # Read with different encodings
+        content = None
+        for encoding in ['utf-8', 'big5', 'gbk', 'latin-1']:
+            try:
+                with open(filepath, 'r', encoding=encoding) as f:
+                    content = f.read()
+                break
+            except:
+                continue
+        
+        if not content:
+            print(f"Failed to read {filepath}")
+            return False
+        
+        info = extract_case_info(content)
+        new_html = CASE_TEMPLATE.format(**info)
+        
+        # Write back
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(new_html)
+        
+        print(f"Converted: {os.path.basename(filepath)}")
+        return True
+    except Exception as e:
+        print(f"Error converting {filepath}: {e}")
+        return False
+
+def main():
+    services_dir = Path(__file__).parent / 'services'
+    case_files = list(services_dir.glob('case-vocus-*.html'))
+    
+    print(f"Found {len(case_files)} case files to convert")
+    
+    success_count = 0
+    for filepath in case_files:
+        if convert_case_file(filepath):
+            success_count += 1
+    
+    print(f"\nConverted {success_count}/{len(case_files)} files successfully")
+
+if __name__ == '__main__':
+    main()

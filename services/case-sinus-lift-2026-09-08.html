@@ -1,355 +1,231 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>上顎竇提升術案例｜科技渥爾牙診所</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <style>
-    /* 案例頁面統一樣式 */
-    .case-page-title {
-      text-align: center;
-      margin: 2rem 0 1rem;
-    }
-    .case-page-title h1 {
-      font-size: 2rem;
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
-    }
-    .case-page-subtitle {
-      color: var(--text-light);
-      font-size: 1rem;
-    }
-    
-    .case-section {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      margin: 2rem 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    
-    .case-section h2 {
-      color: var(--primary-color);
-      font-size: 1.4rem;
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--secondary-color);
-    }
-    
-    .case-section h3 {
-      color: var(--primary-dark);
-      font-size: 1.15rem;
-      margin-top: 1.5rem;
-      margin-bottom: 0.8rem;
-    }
-    
-    .case-overview {
-      background: linear-gradient(135deg, var(--primary-color) 0%, #1a5276 100%);
-      color: white;
-      padding: 2rem;
-      border-radius: 12px;
-      margin: 2rem 0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
-    .case-overview h2 {
-      color: white;
-      font-size: 1.4rem;
-      margin-top: 0;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid rgba(255,255,255,0.3);
-      padding-bottom: 0.5rem;
-    }
-    
-    .case-meta-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .case-meta-item {
-      background: rgba(255,255,255,0.15);
-      padding: 0.8rem 1rem;
-      border-radius: 8px;
-    }
-    .case-meta-label {
-      font-size: 0.75rem;
-      opacity: 0.8;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .case-meta-value {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-top: 0.2rem;
-    }
-    
-    .case-content {
-      line-height: 1.8;
-    }
-    .case-content p {
-      margin-bottom: 0.8rem;
-      color: #444;
-    }
-    
-    .key-points ul {
-      list-style: none;
-      padding: 0;
-    }
-    .key-points li {
-      padding: 0.5rem 0;
-      padding-left: 1.5rem;
-      position: relative;
-    }
-    .key-points li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--secondary-color);
-      font-weight: bold;
-    }
-    
-    .case-image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-    @media (max-width: 768px) {
-      .case-image-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-    .case-image-grid-item {
-      position: relative;
-    }
-    .case-image-number {
-      position: absolute;
-      top: 8px;
-      left: 8px;
-      background: rgba(44, 127, 184, 0.9);
-      color: white;
-      padding: 4px 12px;
-      border-radius: 4px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      z-index: 1;
-    }
-    .case-image-grid-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .case-image-grid-item img:hover {
-      transform: scale(1.02);
-    }
-    
-    .case-disclaimer {
-      background: #fffbeb;
-      border-left: 4px solid #f59e0b;
-      padding: 1.5rem;
-      margin: 2rem 0;
-      border-radius: 4px;
-    }
-    .case-disclaimer strong {
-      color: #92400e;
-    }
-    
-    .case-cta {
-      text-align: center;
-      padding: 2rem;
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      border-radius: 12px;
-      margin: 2rem 0;
-    }
-    .case-cta h3 {
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-    }
-  </style>
+  <title>上顎竇提升術：技術，決定傷口大小｜治療案例｜科技渥爾牙醫診所</title>
+  <meta name="description" content="微創內開式上顎竇提升術案例分享。單一小傷口、鼻竇黏膜完整無破損、骨粉均勻包覆、植體穩定度理想。患者當天即可正常進食。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{primary:{50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',600:'#1E3A8A',700:'#1e3a8a',800:'#1e40af'},warm:{50:'#faf7f2',100:'#f5f0e6'},titanium:{50:'#f8f9fa',100:'#e9ecef',200:'#dee2e6',300:'#ced4da',400:'#adb5bd',500:'#6c757d',600:'#495057',700:'#343a40',800:'#212529'}}}}}</script>
+  <style>html{scroll-behavior:smooth}.nav-link{position:relative}.nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#1E3A8A;transition:width .3s}.nav-link:hover::after{width:100%}</style>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <a href="../index.html" class="logo">科技渥爾牙診所</a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="../index.html">首頁</a></li>
-          <li class="dropdown">
-            <a href="#">服務項目</a>
-            <ul class="dropdown-menu">
-              <li><a href="implants.html">3D數位植牙</a></li>
-              <li><a href="orthodontics.html">數位矯正</a></li>
-              <li><a href="cadcam.html">CAD/CAM全瓷</a></li>
-              <li><a href="cases.html">治療案例</a></li>
-            </ul>
-          </li>
-          <li><a href="../index.html#about">關於我們</a></li>
-          <li><a href="../index.html#contact">聯絡我們</a></li>
-        </ul>
-      </nav>
+<body class="font-sans text-titanium-700 antialiased bg-titanium-50">
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <a href="../index.html" class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center text-white text-xl shadow-lg"><i class="fas fa-tooth"></i></div>
+        <div><span class="text-xl font-bold text-primary-600">科技渥爾</span><span class="text-sm text-titanium-500 block -mt-1">牙醫診所</span></div>
+      </a>
+      <div class="hidden lg:flex items-center space-x-8">
+        <a href="../index.html" class="nav-link text-titanium-700 hover:text-primary-600 font-medium">回首頁</a>
+        <a href="cases.html" class="nav-link text-primary-600 font-medium">治療案例</a>
+        <a href="https://line.me/R/ti/p/@599heehy" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2.5 rounded-full font-medium text-sm inline-flex items-center space-x-2 transition-all hover:-translate-y-0.5"><i class="fab fa-line"></i><span>Line</span></a>
+      </div>
+      <button class="lg:hidden text-titanium-700 p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i class="fas fa-bars text-2xl"></i></button>
     </div>
-  </header>
-
-  <main>
-    <section class="case-hero">
-      <div class="container">
-        <h1>上顎竇提升術：技術，決定傷口大小</h1>
-        <p>微創內開式手術案例分享</p>
-      </div>
-    </section>
-
-    <section class="service-content">
-      <div class="container case-content">
-        <div class="case-meta">
-          <strong>科技渥爾牙診所 簡院長</strong>｜案例日期：2026-09-08｜治療項目：3D數位植牙 + 上顎竇提升術
-        </div>
-
-        <h2>患者最常問的話</h2>
-        <blockquote>
-          「醫師，我問過別的地方，他們說這個手術很複雜，要開很大的傷口⋯⋯」
-        </blockquote>
-        <p>每次聽到這句話，我都知道，患者之前得到的資訊，可能來自於一位經驗還不夠純熟的醫師。</p>
-        <p>上顎後牙區的植牙，確實經常需要合併「上顎竇提升術」。這個手術的技術門檻高，<strong>醫師的經驗與手法，直接決定了患者的傷口大小、術後恢復快慢，甚至整個植牙的成敗。</strong></p>
-
-        <h2>骨頭不夠，不是患者的錯</h2>
-        <p>上顎竇是鼻腔兩側的空腔，像一個會慢慢膨脹的氣球。當大臼齒長期缺牙，這個氣球會向下擴張，原本應該厚實的骨頭，被壓得越來越薄。</p>
-        <p>這不是患者能控制的。這是時間造成的結果。</p>
-        <p>問題是：骨頭不夠，植體就無法穩固。就像要把一根螺絲釘入薄板，釘子會穿透、會鬆動。沒有足夠的骨質支撐，植牙遲早會失敗。</p>
-        <p>所以，上顎竇提升術的目的，就是<strong>在有限的空間裡，為植體創造一個穩固的家。</strong></p>
-
-        <h2>技術的差異：大傷口 vs. 微創</h2>
-        <p>同樣是「上顎竇提升術」，不同醫師的做法，天差地遠。</p>
-
-        <h3>傳統外開式手術（側窗術）</h3>
-        <p>經驗不足的醫師，面對骨量嚴重不足的情況，往往只能選擇從側邊翻開大傷口，直接打開鼻竇外壁，手工剝離黏膜，再填入骨粉。術後腫脹明顯，恢復期長，患者的不適感也重。</p>
-
-        <h3>內開式微創手術（內部上顎竇提升術）</h3>
-        <p><strong>這才是真正考驗醫師技術的時候。</strong></p>
-        <p>經驗純熟的醫師，不需要翻開大傷口。從植牙的位置，用特殊器械輕輕頂升鼻竇黏膜，在同一個小傷口中完成補骨與植牙。傷口小、出血少、術後幾乎不太腫，患者當天就能正常進食。</p>
-
-        <div class="highlight-box">
-          <h4>🔑 關鍵差別在哪裡？</h4>
-          <p>不是器械，是<strong>手感</strong>。</p>
-          <p>鼻竇黏膜薄如蟬翼，頂升的力道多一分會破，少一分不到位。骨粉填入的量與位置，決定了未來骨頭生長的品質。植體植入的角度與深度，影響了將來假牙的美觀與功能。</p>
-          <p>這些細節，沒有足夠的臨床經驗，做不到。</p>
-        </div>
-
-        <h2>為患者設想的每一個決定</h2>
-        <p>一個以患者為中心的醫師，在擬定治療計畫時，不會只問「能不能做」，而是會問：</p>
-        <ul>
-          <li><strong>怎麼做，患者的傷口最小？</strong></li>
-          <li><strong>怎麼做，患者的恢復最快？</strong></li>
-          <li><strong>怎麼做，長期的結果最穩定？</strong></li>
-        </ul>
-        <p>這三個問題，決定了手術的每一個步驟。</p>
-
-        <h2>本次案例手術結果</h2>
-        <p>以今天的案例來說，患者上顎左側第二大臼齒長期缺牙，骨量明顯不足。若選擇外開式手術，患者要承受更大的傷口與更長的恢復期。但評估後，我相信可以用微創內開式完成——<strong>這個判斷，來自於過去無數次手術累積的經驗，也來自於對這位患者具體狀況的仔細評估。</strong></p>
-
-        <div class="surgery-result">
-          <div class="result-item">
-            <div class="check">✓</div>
-            <p>單一小傷口<br>無需翻開側窗</p>
-          </div>
-          <div class="result-item">
-            <div class="check">✓</div>
-            <p>鼻竇黏膜完整<br>無破損</p>
-          </div>
-          <div class="result-item">
-            <div class="check">✓</div>
-            <p>骨粉均勻包覆<br>植體頂端</p>
-          </div>
-          <div class="result-item">
-            <div class="check">✓</div>
-            <p>植體角度與<br>穩定度理想</p>
-          </div>
-        </div>
-
-        <div class="case-images">
-          <h3 style="text-align: center; margin: 2rem 0 1.5rem;">術前術後 CBCT 對比（2026/09/08）</h3>
-          <p style="text-align: center; color: var(--text-light); margin-bottom: 1rem;">每張影像上半部為植牙前、下半部為植牙後，同一切面直接對比</p>
-          <div class="image-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
-            <figure style="text-align: center; margin: 0;">
-              <img src="../images/cases/case-sinus-lift-2026-09-08-frontal.jpg" alt="正面視角 CBCT - 上顎竇提升術前術後對比" style="max-width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
-              <figcaption style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;"><strong>正面視角</strong>｜上：術前上顎竇底位置／下：術後鼻竇適度提升</figcaption>
-            </figure>
-            <figure style="text-align: center; margin: 0;">
-              <img src="../images/cases/case-sinus-lift-2026-09-08-lateral.jpg" alt="側面視角 CBCT - 上顎竇提升術前術後對比" style="max-width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
-              <figcaption style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;"><strong>側面視角</strong>｜上：術前骨量不足／下：術後骨粉補足、植體穩固</figcaption>
-            </figure>
-          </div>
-          <div class="image-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
-            <figure style="text-align: center; margin: 0;">
-              <img src="../images/cases/case-sinus-lift-2026-09-08-extra1.jpg" alt="CBCT 立體重建 - 上顎竇提升術後評估" style="max-width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
-              <figcaption style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">植牙手術後的電腦斷層</figcaption>
-            </figure>
-            <figure style="text-align: center; margin: 0;">
-              <img src="../images/cases/case-sinus-lift-2026-09-08-extra2.jpg" alt="CBCT 橫切面 - 植體定位與骨整合評估" style="max-width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
-              <figcaption style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">植牙手術前的電腦斷層</figcaption>
-            </figure>
-          </div>
-          <p style="font-size: 0.85rem; color: var(--text-light); text-align: center; font-style: italic;">▲ 同一時間點（2026/09/08）術後拍攝，不同切面同時呈現術前術後對比。透過微創內開式手術，不需翻開大傷口即可完成補骨與植牙。</p>
-        </div>
-
-        <p>患者離開診所時，幾乎感覺不到自己做了什麼大手術。</p>
-        <p><strong>這，就是技術的價值。</strong></p>
-
-        <h2>給正在考慮植牙的你</h2>
-        <p>如果你被告知「骨頭不夠，要做上顎竇提升術」，請不要只問「多少錢」。</p>
-        <p>請問你的醫師：</p>
-        <ul>
-          <li>「您一年做多少例上顎竇提升術？」</li>
-          <li>「您會用微創內開式，還是外開式？」</li>
-          <li>「術後我大概會腫多久？」</li>
-        </ul>
-        <p><strong>經驗純熟的醫師，不會迴避這些問題。</strong></p>
-        <p>上顎竇提升術本身並不可怕。可怕的是，交給一個經驗不足、無法為你選擇最小傷口途徑的醫師。</p>
-
-        <div class="highlight-box">
-          <h4>⚠️ 關鍵提醒</h4>
-          <ul>
-            <li>缺牙越久，骨頭流失越多，手術難度越高</li>
-            <li>同樣的手術名稱，技術內涵可能完全不同</li>
-            <li><strong>選擇醫師，比選擇植體品牌更重要</strong></li>
-          </ul>
-        </div>
-
-        <p style="text-align: center; margin-top: 3rem; color: var(--text-light); font-style: italic;">
-          科技渥爾牙診所 簡院長<br>
-          我們相信：醫師的技術，是給患者最好的安慰。
-        </p>
-
-        <div style="text-align: center; margin-top: 2rem;">
-          <a href="cases.html" class="btn-secondary">← 返回治療案例列表</a>
-          <a href="implants.html" class="btn-primary" style="margin-left: 1rem;">了解更多3D數位植牙 →</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-info">
-        <h3>科技渥爾牙診所</h3>
-        <p>專業．數位．安心</p>
-        <p>電話：02-27380200</p>
-        <p>地址：台北市大安區復興南路二段302號</p>
-        <p>官方 Line：@599heehy</p>
-      </div>
-      <div class="footer-links">
-        <a href="../index.html">首頁</a>
-        <a href="implants.html">3D數位植牙</a>
-        <a href="orthodontics.html">數位矯正</a>
-        <a href="cadcam.html">CAD/CAM全瓷</a>
-        <a href="cases.html">治療案例</a>
-        <a href="../index.html#about">關於我們</a>
-        <a href="../index.html#contact">聯絡我們</a>
-      </div>
-      <p class="copyright">&copy; 2024 科技渥爾牙診所 版權所有</p>
+  </div>
+  <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-titanium-100">
+    <div class="px-4 py-4 space-y-3">
+      <a href="../index.html" class="block py-2 text-titanium-700 font-medium">回首頁</a>
+      <a href="cases.html" class="block py-2 text-primary-600 font-medium">治療案例</a>
+      <a href="https://line.me/R/ti/p/@599heehy" target="_blank" class="block bg-green-500 text-white px-6 py-3 rounded-full font-medium text-center mt-4"><i class="fab fa-line mr-2"></i>Line</a>
     </div>
-  </footer>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative pt-32 pb-16 bg-gradient-to-br from-primary-600 to-primary-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-5 py-2 mb-8">
+      <i class="fas fa-file-medical-alt text-white/90"></i>
+      <span class="text-white/90 text-sm font-medium">治療案例分享</span>
+    </div>
+    <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4">上顎竇提升術：技術，決定傷口大小</h1>
+    <div class="flex items-center justify-center space-x-4 text-white/80 text-sm mt-4">
+      <span><i class="fas fa-calendar-alt mr-2"></i>2026-09-08</span>
+      <span>·</span>
+      <span>3D數位植牙 + 上顎竇提升術</span>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Meta -->
+    <div class="bg-primary-50 rounded-2xl p-6 mb-8 border border-primary-100">
+      <div class="flex flex-wrap items-center gap-4 text-sm text-primary-700">
+        <span><i class="fas fa-user-md mr-2"></i><strong>科技渥爾牙診所 簡院長</strong></span>
+        <span class="hidden sm:inline">|</span>
+        <span><i class="fas fa-calendar mr-2"></i>案例日期：2026-09-08</span>
+        <span class="hidden sm:inline">|</span>
+        <span><i class="fas fa-tooth mr-2"></i>治療項目：3D數位植牙 + 上顎竇提升術</span>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="prose prose-lg max-w-none">
+      <h2 class="text-2xl font-bold text-titanium-800 mt-8 mb-4">患者最常問的話</h2>
+      <blockquote class="bg-warm-50 border-l-4 border-primary-600 pl-6 py-4 italic text-titanium-700 my-6">
+        「醫師，我問過別的地方，他們說這個手術很複雜，要開很大的傷口⋯⋯」
+      </blockquote>
+      <p class="text-titanium-600 leading-relaxed mb-4">每次聽到這句話，我都知道，患者之前得到的資訊，可能來自於一位經驗還不夠純熟的醫師。</p>
+      <p class="text-titanium-600 leading-relaxed mb-4">上顎後牙區的植牙，確實經常需要合併「上顎竇提升術」。這個手術的技術門檻高，<strong class="text-titanium-800">醫師的經驗與手法，直接決定了患者的傷口大小、術後恢復快慢，甚至整個植牙的成敗。</strong></p>
+
+      <h2 class="text-2xl font-bold text-titanium-800 mt-8 mb-4">骨頭不夠，不是患者的錯</h2>
+      <p class="text-titanium-600 leading-relaxed mb-4">上顎竇是鼻腔兩側的空腔，像一個會慢慢膨脹的氣球。當大臼齒長期缺牙，這個氣球會向下擴張，原本應該厚實的骨頭，被壓得越來越薄。</p>
+      <p class="text-titanium-600 leading-relaxed mb-4">這不是患者能控制的。這是時間造成的結果。</p>
+      <p class="text-titanium-600 leading-relaxed mb-4">問題是：骨頭不夠，植體就無法穩固。就像要把一根螺絲釘入薄板，釘子會穿透、會鬆動。沒有足夠的骨質支撐，植牙遲早會失敗。</p>
+      <p class="text-titanium-600 leading-relaxed mb-4">所以，上顎竇提升術的目的，就是<strong class="text-titanium-800">在有限的空間裡，為植體創造一個穩固的家。</strong></p>
+
+      <h2 class="text-2xl font-bold text-titanium-800 mt-8 mb-4">技術的差異：大傷口 vs. 微創</h2>
+      <p class="text-titanium-600 leading-relaxed mb-4">同樣是「上顎竇提升術」，不同醫師的做法，天差地遠。</p>
+
+      <h3 class="text-xl font-bold text-titanium-700 mt-6 mb-3">傳統外開式手術（側窗術）</h3>
+      <p class="text-titanium-600 leading-relaxed mb-4">經驗不足的醫師，面對骨量嚴重不足的情況，往往只能選擇從側邊翻開大傷口，直接打開鼻竇外壁，手工剝離黏膜，再填入骨粉。術後腫脹明顯，恢復期長，患者的不適感也重。</p>
+
+      <h3 class="text-xl font-bold text-titanium-700 mt-6 mb-3">內開式微創手術（內部上顎竇提升術）</h3>
+      <p class="text-titanium-600 leading-relaxed mb-4"><strong class="text-titanium-800">這才是真正考驗醫師技術的時候。</strong></p>
+      <p class="text-titanium-600 leading-relaxed mb-4">經驗純熟的醫師，不需要翻開大傷口。從植牙的位置，用特殊器械輕輕頂升鼻竇黏膜，在同一個小傷口中完成補骨與植牙。傷口小、出血少、術後幾乎不太腫，患者當天就能正常進食。</p>
+
+      <div class="bg-primary-50 rounded-2xl p-6 my-8 border border-primary-100">
+        <h4 class="text-lg font-bold text-primary-700 mb-3"><i class="fas fa-key mr-2"></i>關鍵差別在哪裡？</h4>
+        <p class="text-titanium-600 leading-relaxed mb-2">不是器械，是<strong class="text-titanium-800">手感</strong>。</p>
+        <p class="text-titanium-600 leading-relaxed mb-2">鼻竇黏膜薄如蟬翼，頂升的力道多一分會破，少一分不到位。骨粉填入的量與位置，決定了未來骨頭生長的品質。植體植入的角度與深度，影響了將來假牙的美觀與功能。</p>
+        <p class="text-titanium-600 leading-relaxed">這些細節，沒有足夠的臨床經驗，做不到。</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-titanium-800 mt-8 mb-4">為患者設想的每一個決定</h2>
+      <p class="text-titanium-600 leading-relaxed mb-4">一個以患者為中心的醫師，在擬定治療計畫時，不會只問「能不能做」，而是會問：</p>
+      <ul class="list-none pl-0 my-6">
+        <li class="flex items-start mb-3">
+          <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+          <span class="text-titanium-700"><strong>怎麼做，患者的傷口最小？</strong></span>
+        </li>
+        <li class="flex items-start mb-3">
+          <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+          <span class="text-titanium-700"><strong>怎麼做，患者的恢復最快？</strong></span>
+        </li>
+        <li class="flex items-start mb-3">
+          <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+          <span class="text-titanium-700"><strong>怎麼做，長期的結果最穩定？</strong></span>
+        </li>
+      </ul>
+      <p class="text-titanium-600 leading-relaxed mb-4">這三個問題，決定了手術的每一個步驟。</p>
+
+      <h2 class="text-2xl font-bold text-titanium-800 mt-8 mb-4">本次案例手術結果</h2>
+      <p class="text-titanium-600 leading-relaxed mb-4">以今天的案例來說，患者上顎左側第二大臼齒長期缺牙，骨量明顯不足。若選擇外開式手術，患者要承受更大的傷口與更長的恢復期。但評估後，我相信可以用微創內開式完成——<strong class="text-titanium-800">這個判斷，來自於過去無數次手術累積的經驗，也來自於對這位患者具體狀況的仔細評估。</strong></p>
+
+      <!-- Results Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 my-8">
+        <div class="bg-green-50 rounded-xl p-4 text-center border border-green-100">
+          <div class="text-green-600 text-3xl mb-2"><i class="fas fa-check-circle"></i></div>
+          <p class="text-titanium-700 text-sm font-medium">單一小傷口<br>無需翻開側窗</p>
+        </div>
+        <div class="bg-green-50 rounded-xl p-4 text-center border border-green-100">
+          <div class="text-green-600 text-3xl mb-2"><i class="fas fa-check-circle"></i></div>
+          <p class="text-titanium-700 text-sm font-medium">鼻竇黏膜完整<br>無破損</p>
+        </div>
+        <div class="bg-green-50 rounded-xl p-4 text-center border border-green-100">
+          <div class="text-green-600 text-3xl mb-2"><i class="fas fa-check-circle"></i></div>
+          <p class="text-titanium-700 text-sm font-medium">骨粉均勻包覆<br>植體頂端</p>
+        </div>
+        <div class="bg-green-50 rounded-xl p-4 text-center border border-green-100">
+          <div class="text-green-600 text-3xl mb-2"><i class="fas fa-check-circle"></i></div>
+          <p class="text-titanium-700 text-sm font-medium">植體角度與<br>穩定度理想</p>
+        </div>
+      </div>
+
+      <!-- CBCT Images -->
+      <div class="my-10">
+        <h3 class="text-xl font-bold text-titanium-800 text-center mb-2">術前術後 CBCT 對比（2026/09/08）</h3>
+        <p class="text-titanium-500 text-center text-sm mb-6">每張影像上半部為植牙前、下半部為植牙後，同一切面直接對比</p>
+        
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <figure class="bg-titanium-50 rounded-xl p-4">
+            <img src="../images/cases/case-sinus-lift-2026-09-08-frontal.jpg" alt="正面視角 CBCT - 上顎竇提升術前術後對比" class="w-full rounded-lg shadow-md">
+            <figcaption class="text-center text-sm text-titanium-500 mt-3"><strong>正面視角</strong>｜上：術前上顎竇底位置／下：術後鼻竇適度提升</figcaption>
+          </figure>
+          <figure class="bg-titanium-50 rounded-xl p-4">
+            <img src="../images/cases/case-sinus-lift-2026-09-08-lateral.jpg" alt="側面視角 CBCT - 上顎竇提升術前術後對比" class="w-full rounded-lg shadow-md">
+            <figcaption class="text-center text-sm text-titanium-500 mt-3"><strong>側面視角</strong>｜上：術前骨量不足／下：術後骨粉補足、植體穩固</figcaption>
+          </figure>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <figure class="bg-titanium-50 rounded-xl p-4">
+            <img src="../images/cases/case-sinus-lift-2026-09-08-extra1.jpg" alt="CBCT 立體重建 - 上顎竇提升術後評估" class="w-full rounded-lg shadow-md">
+            <figcaption class="text-center text-sm text-titanium-500 mt-3">植牙手術後的電腦斷層</figcaption>
+          </figure>
+          <figure class="bg-titanium-50 rounded-xl p-4">
+            <img src="../images/cases/case-sinus-lift-2026-09-08-extra2.jpg" alt="CBCT 橫切面 - 植體定位與骨整合評估" class="w-full rounded-lg shadow-md">
+            <figcaption class="text-center text-sm text-titanium-500 mt-3">植牙手術前的電腦斷層</figcaption>
+          </figure>
+        </div>
+        
+        <p class="text-sm text-titanium-400 text-center italic">▲ 同一時間點（2026/09/08）術後拍攝，不同切面同時呈現術前術後對比。透過微創內開式手術，不需翻開大傷口即可完成補骨與植牙。</p>
+      </div>
+
+      <p class="text-titanium-600 leading-relaxed mb-4">患者離開診所時，幾乎感覺不到自己做了什麼大手術。</p>
+      <p class="text-2xl font-bold text-primary-600 text-center my-8">這，就是技術的價值。</p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="bg-warm-50 border-l-4 border-amber-400 rounded-r-xl p-6 mt-8">
+      <p class="text-amber-800 text-sm"><strong><i class="fas fa-exclamation-triangle mr-2"></i>衛教說明：</strong>本案例僅作為醫療知識分享，實際治療效果因個人狀況而異。任何牙科治療前，請先由專業醫師進行完整評估與診斷。</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-br from-primary-600 to-primary-700">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-2xl lg:text-3xl font-bold text-white mb-4">想了解更多治療方案？</h2>
+    <p class="text-white/80 mb-8">每個人的口腔狀況都不同，讓我們為您量身規劃最適合的治療方案。</p>
+    <a href="https://line.me/R/ti/p/@599heehy" target="_blank" class="bg-white text-green-600 px-8 py-4 rounded-full font-bold text-lg inline-flex items-center space-x-3 shadow-2xl hover:-translate-y-1 transition-all">
+      <i class="fab fa-line"></i><span>Line</span>
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-titanium-800 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center text-white text-xl"><i class="fas fa-tooth"></i></div>
+          <div><span class="text-xl font-bold">科技渥爾</span><span class="text-sm text-titanium-400 block">牙醫診所</span></div>
+        </div>
+        <p class="text-titanium-400 text-sm">以專業與溫度，打造專屬於您的自信微笑。</p>
+      </div>
+      <div>
+        <div class="font-bold mb-4">聯絡我們</div>
+        <div class="space-y-2 text-titanium-400 text-sm">
+          <div><i class="fas fa-map-marker-alt w-5"></i> 台北市大安區復興南路二段302號</div>
+          <div><i class="fab fa-line w-5 text-green-400"></i> <a href="https://line.me/R/ti/p/@599heehy" target="_blank" class="hover:text-white">@599heehy</a></div>
+        </div>
+      </div>
+      <div>
+        <div class="font-bold mb-4">快速導覽</div>
+        <div class="grid grid-cols-2 gap-2 text-sm">
+          <a href="../index.html" class="text-titanium-400 hover:text-white">回診所首頁</a>
+          <a href="cases.html" class="text-titanium-400 hover:text-white">治療案例</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-titanium-700 mt-8 pt-8 text-center text-titanium-500 text-sm">
+      © 2024 科技渥爾牙醫診所. All rights reserved.
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

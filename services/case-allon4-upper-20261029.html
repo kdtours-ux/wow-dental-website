@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上顎 All-on-4 全口重建案例 | 科技渥爾牙醫診所</title>
+    <style>
+        :root {
+            --primary: #1a5276;
+            --secondary: #2980b9;
+            --accent: #e74c3c;
+            --text: #2c3e50;
+            --bg: #f8f9fa;
+            --light: #ecf0f1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: var(--bg);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        header .subtitle {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .case-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .meta-item {
+            text-align: center;
+        }
+        
+        .meta-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .meta-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .section h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--light);
+        }
+        
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .challenge-card {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .challenge-card h4 {
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        
+        .treatment-steps {
+            counter-reset: step;
+        }
+        
+        .treatment-step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--light);
+        }
+        
+        .treatment-step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .step-number {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        
+        .step-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .image-card {
+            background: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .image-caption {
+            padding: 15px;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .highlight-box h4 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .tech-badge {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 5px 5px 5px 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--secondary);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding-left: 25px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--secondary);
+            border-radius: 50%;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .case-meta {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .treatment-step {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>上顎 All-on-4 全口重建案例</h1>
+            <p class="subtitle">突破極限骨條件的精準植牙解決方案</p>
+            <div class="case-meta">
+                <div class="meta-item">
+                    <div class="meta-label">治療日期</div>
+                    <div class="meta-value">2026年10月29日</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">主治醫師</div>
+                    <div class="meta-value">簡士智 醫師</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">植體數量</div>
+                    <div class="meta-value">4 顆</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">治療歷時</div>
+                    <div class="meta-value">單次手術</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- 患者背景 -->
+        <section class="section">
+            <h2>🦷 患者背景與求診主訴</h2>
+            <p>患者因上顎無齒顎合併嚴重骨缺損問題，先前曾於多家醫療院所評估，均被診斷為「上顎骨量嚴重不足、解剖條件受限」，判定無法進行傳統 All-on-4 或一般的植牙治療。經轉介至本院尋求專業第二評估意見。</p>
+            
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <h4>⚠️ 挑戰 1：上顎後牙區嚴重萎縮</h4>
+                    <p>左側後牙區（#24、#26）骨缺損範圍極大，幾乎無可用齒槽骨，傳統植牙幾乎不可能。</p>
+                </div>
+                <div class="challenge-card">
+                    <h4>⚠️ 挑戰 2：上顎竇下垂</h4>
+                    <p>上顎竇底距離牙槽頂過近，常規植入深度受限，必須合併鼻竇增高術。</p>
+                </div>
+                <div class="challenge-card">
+                    <h4>⚠️ 挑戰 3：結構複雜度高</h4>
+                    <p>前牙及右側區齒槽脊寬度與高度均不足，需特殊角度規劃克服。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 術前評估 -->
+        <section class="section">
+            <h2>📋 術前 CBCT 影像評估</h2>
+            <p>透過高階電腦斷層掃描（CBCT），進行三維立體分析，精確評估骨質、骨量與解剖結構關係：</p>
+            
+            <div class="image-gallery">
+                <div class="image-card">
+                    <img src="../images/cases/allon4-20261029/01.jpeg" alt="術前 CBCT - 全景評估">
+                    <div class="image-caption">
+                        <strong>術前全景評估</strong><br>
+                        清晰呈現上顎整體骨缺損狀況及解剖限制
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="../images/cases/allon4-20261029/02.jpeg" alt="術前 CBCT - 骨缺損分析">
+                    <div class="image-caption">
+                        <strong>骨缺損區域分析</strong><br>
+                        上顎竇位置與後牙區骨高度精確測量
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="../images/cases/allon4-20261029/03.jpeg" alt="術前 CBCT - 立體重建">
+                    <div class="image-caption">
+                        <strong>三維立體重建</strong><br>
+                        從多角度評估骨輪廓與植入可行位置
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>💡 診斷關鍵</h4>
+                <p>僅 #25 殘根周邊具備局部植牙條件，其餘區域骨缺損嚴重。必須採用<strong>All-on-4</strong>策略——利用特殊角度規劃，以少數植體支撐全顎假牙。</p>
+            </div>
+        </section>
+
+        <!-- 治療計畫 -->
+        <section class="section">
+            <h2>🔧 精準治療計畫</h2>
+            <p>為突破骨量不足之困境，本院擬定以下精密手術方案：</p>
+            
+            <div class="treatment-steps">
+                <div class="treatment-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>#25 區上顎竇內升與大尺寸植體植入</h3>
+                        <p>針對 #24 嚴重骨缺損與 #26 無骨狀況，利用 #25 殘根處進行<strong>上顎竇內升術（Internal Sinus Lift）</strong>。頂部精準填補骨粉後，植入規格 <strong>5.0×10 mm</strong> 之大尺寸植體，初期穩定度扭力達 <strong>35+ N-cm</strong>。</p>
+                        <span class="tech-badge">內部鼻竇增高手術</span>
+                        <span class="tech-badge">大尺寸植體</span>
+                    </div>
+                </div>
+                
+                <div class="treatment-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>#15 區傾斜植入（Tilted Implant）</h3>
+                        <p>刻意將 #15 位置以<strong>傾斜角度植入</strong>，藉此避開上顎竇底解剖構造，最大化爭取可利用之骨質條件與支撐跨距。這是 All-on-4 經典策略關鍵。</p>
+                        <span class="tech-badge">傾斜植體技術</span>
+                        <span class="tech-badge">解剖迴避</span>
+                    </div>
+                </div>
+                
+                <div class="treatment-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>#13、#23 區即拔即種與引導骨再生（GBR）</h3>
+                        <p>採用<strong>即拔即種</strong>術式，同步填補骨粉（Bone Graft）並置入再生膜（Barrier Membrane），優化牙脊外型與骨整合環境，確保長期穩定性。</p>
+                        <span class="tech-badge">即拔即種</span>
+                        <span class="tech-badge">GBR 引導骨再生</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>📍 植體配置總覽</h4>
+                <p style="font-size: 1.1rem; margin-top: 10px;">
+                    <strong>#15</strong>（傾斜）→ <strong>#13</strong>（前牙）→ <strong>#23</strong>（前牙）→ <strong>#25</strong>（後牙/內升）<br><br>
+                    四顆策略性分布的植體，避開解剖危險區，最大化利用可用骨質，為全口重建奠定堅實基礎。
+                </p>
+            </div>
+        </section>
+
+        <!-- 治療規劃影像 -->
+        <section class="section">
+            <h2>📐 治療規劃與手術執行</h2>
+            <p>術中即時 CBCT 確認與術後即拍影像，記錄精準治療過程：</p>
+            
+            <div class="image-gallery">
+                <div class="image-card">
+                    <img src="../images/cases/allon4-20261029/04.jpeg" alt="手術規劃 - 植體定位">
+                    <div class="image-caption">
+                        <strong>3D 植體定位規劃</strong><br>
+                        虛擬植體放置與角度模擬
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="../images/cases/allon4-20261029/05.jpeg" alt="手術執行 - 植體植入">
+                    <div class="image-caption">
+                        <strong>術中植入確認</strong><br>
+                        植體角度與深度即時驗證
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="../images/cases/allon4-20261029/06.jpeg" alt="手術過程 - 多角度">
+                    <div class="image-caption">
+                        <strong>多平面確認</strong><br>
+                        確保各植體與周圍結構安全距離
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 術後成果 -->
+        <section class="section">
+            <h2>✅ 術後成果與影像確認</h2>
+            
+            <div class="highlight-box" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left-color: #2196f3;">
+                <h4 style="color: #1565c0;">🎯 手術結果總結</h4>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>四顆植體皆順利、穩定植入預定位置</li>
+                    <li>所有植體初期穩定度理想，扭力值均大於 35 N-cm</li>
+                    <li>上顎竇內升術順利完成，植體周圍骨粉包覆良好</li>
+                    <li>傾斜植入策略成功避開解剖限制，取得最佳分散支撐</li>
+                </ul>
+            </div>
+            
+            <div class="image-gallery">
+                <div class="image-card">
+                    <img src="../images/cases/allon4-20261029/07.jpeg" alt="術後 CBCT - 側面觀">
+                    <div class="image-caption">
+                        <strong>術後側面立體重建</strong><br>
+                        清晰可見四顆植體位置與角度分布
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="../images/cases/allon4-20261029/08.jpeg" alt="術後 CBCT - 切面確認">
+                    <div class="image-caption">
+                        <strong>多切面術後確認</strong><br>
+                        植體周圍骨整合狀況良好
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="../images/cases/allon4-20261029/09.jpeg" alt="術後 CBCT - 全景">
+                    <div class="image-caption">
+                        <strong>術後全景立體影像</strong><br>
+                        上顎無齒顎重建完成，預留臨時假牙裝置空間
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>🔍 術後 CBCT 覆核細節</h4>
+                <p>經術後電腦斷層掃描確認：</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>各植體周圍皆獲得充足之自體骨與骨粉包覆</li>
+                    <li>傾斜植體角度控制精確，遠離上顎竇底與鼻底</li>
+                    <li>#25 內升區域植體周圍骨整合環境良好</li>
+                    <li>無神經或血管損傷跡象</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 技術重點 -->
+        <section class="section">
+            <h2>🎯 本案例技術重點</h2>
+            <p>本案成功關鍵在於整合多項先進技術，於極限條件下完成看似不可能的任務：</p>
+            
+            <div class="challenge-grid">
+                <div class="challenge-card" style="border-left-color: var(--secondary);">
+                    <h4 style="color: var(--secondary);">1. All-on-4 傾斜植入策略</h4>
+                    <p>避開解剖限制區，利用後方可用骨質，最大化支撐跨距。</p>
+                </div>
+                <div class="challenge-card" style="border-left-color: var(--secondary);">
+                    <h4 style="color: var(--secondary);">2. 內部鼻竇增高術</h4>
+                    <p>僅剩的後牙骨區透過內升術擴充，避免複雜側開窗手術。</p>
+                </div>
+                <div class="challenge-card" style="border-left-color: var(--secondary);">
+                    <h4 style="color: var(--secondary);">3. 即拔即種 GBR</h4>
+                    <p>縮短治療週期，同步優化前牙區骨整合環境。</p>
+                </div>
+                <div class="challenge-card" style="border-left-color: var(--secondary);">
+                    <h4 style="color: var(--secondary);">4. 3D CBCT 導航</h4>
+                    <p>術前精確規劃、術中即時確認，確保最佳植入位置。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 適合對象 -->
+        <section class="section">
+            <h2>👤 適合此治療的患者</h2>
+            <p>如果您符合以下情況，All-on-4 全口重建可能是您的理想選擇：</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>上顎或全口多顆缺牙</strong>，傳統假牙無法穩固者
+                </div>
+                <div class="timeline-item">
+                    <strong>骨質嚴重萎縮</strong>，被其他醫師告知無法植牙者
+                </div>
+                <div class="timeline-item">
+                    <strong>希望縮短治療時間</strong>，不想經歷多次補骨手術者
+                </div>
+                <div class="timeline-item">
+                    <strong>追求快速恢復咀嚼功能</strong>，期待短期內擁有固定牙橋者
+                </div>
+                <div class="timeline-item">
+                    <strong>曾被告知需要複雜補骨</strong>，希望尋求更微創替代方案者
+                </div>
+            </div>
+            
+            <div class="highlight-box" style="margin-top: 30px;">
+                <h4>📞 免費諮詢</h4>
+                <p>每一位患者的情況都是獨特的。即使您曾被判定「無法植牙」，歡迎蒞臨科技渥爾進行專業評估。先進的 3D 影像技術與多年全口重建經驗，我們樂於為您尋找可能。</p>
+                <p style="margin-top: 15px;">
+                    <strong>科技渥爾牙醫診所</strong><br>
+                    預約專線：(06) 123-4567（範例）<br>
+                    地址：台南市東區範例路 123 號
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 科技渥爾牙醫診所 | All-on-4 全口重建專科</p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">本案例僅供教育與參考用途，實際治療計畫需經專業評估</p>
+        </div>
+    </footer>
+</body>
+</html>
